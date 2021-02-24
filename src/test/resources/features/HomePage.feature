@@ -4,4 +4,5 @@ Feature: Home page
   Scenario: Get the estefafdez website homepage
     Given I navigate to "https://estefafdez.github.io/"
     Then I wait for 2 seconds
+    And I navigate forward
     And I take screenshot

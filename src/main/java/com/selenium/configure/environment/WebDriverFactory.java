@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * This class select and configure the Driver according to your browser selection on the POM.
@@ -40,10 +41,12 @@ public class WebDriverFactory {
 		 /******** The driver selected is Local: Firefox  ********/    	
 		 if ("FIREFOX".equalsIgnoreCase(browser)) {
 			 if("WINDOWS".equalsIgnoreCase(os)){
-				 System.setProperty("webdriver.gecko.driver", resourceFolder+os+"/geckodriver.exe");    
+//				 System.setProperty("webdriver.gecko.driver", resourceFolder+os+"/geckodriver.exe");
+				 WebDriverManager.firefoxdriver().setup();
 			 }
 			 else{
-				 System.setProperty("webdriver.gecko.driver", resourceFolder+os+"/geckodriver");    
+//				 System.setProperty("webdriver.gecko.driver", resourceFolder+os+"/geckodriver");
+				 WebDriverManager.firefoxdriver().setup();
 			 }
 		     driver = new FirefoxDriver();	
 		 }
@@ -52,17 +55,20 @@ public class WebDriverFactory {
 					   
 	     else if ("CHROME".equalsIgnoreCase(browser)) {
 	    	 if("WINDOWS".equalsIgnoreCase(os)){
-	    		 System.setProperty("webdriver.chrome.driver", resourceFolder+os+"/chromedriver.exe");            
+//	    		 System.setProperty("webdriver.chrome.driver", resourceFolder+os+"/chromedriver.exe");
+				 WebDriverManager.chromedriver().setup();
 	    	 }
 	    	 else{
-	    		 System.setProperty("webdriver.chrome.driver", resourceFolder+os+"/chromedriver");        		 
+//	    		 System.setProperty("webdriver.chrome.driver", resourceFolder+os+"/chromedriver");
+				 WebDriverManager.chromedriver().setup();
 	    	 }
 	         driver = new ChromeDriver();
 	     }  
 					        
 		 /******** The driver selected is Internet Explorer ********/        
 	     else if ("INTERNET EXPLORER".equalsIgnoreCase(browser)) {
-	    	 System.setProperty("webdriver.ie.driver", resourceFolder+os+"/IEDriverServer.exe");
+//	    	 System.setProperty("webdriver.ie.driver", resourceFolder+os+"/IEDriverServer.exe");
+			 WebDriverManager.chromedriver().setup();
 			 driver = new InternetExplorerDriver();
 	     } 
 		 /******** The driver is not selected  ********/
