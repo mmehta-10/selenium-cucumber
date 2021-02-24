@@ -3,6 +3,7 @@ package com.selenium.configure.environment;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -54,15 +55,22 @@ public class WebDriverFactory {
 		 /******** The driver selected is Chrome  ********/
 					   
 	     else if ("CHROME".equalsIgnoreCase(browser)) {
-	    	 if("WINDOWS".equalsIgnoreCase(os)){
+			 ChromeOptions chromeOptions = new ChromeOptions();
+
+			 if("WINDOWS".equalsIgnoreCase(os)){
 //	    		 System.setProperty("webdriver.chrome.driver", resourceFolder+os+"/chromedriver.exe");
 				 WebDriverManager.chromedriver().setup();
 	    	 }
 	    	 else{
 //	    		 System.setProperty("webdriver.chrome.driver", resourceFolder+os+"/chromedriver");
 				 WebDriverManager.chromedriver().setup();
+
+				 chromeOptions.addArguments("--no-sandbox");
+				 chromeOptions.addArguments("--headless");
+				 chromeOptions.addArguments("disable-gpu");
 	    	 }
-	         driver = new ChromeDriver();
+
+			 driver = new ChromeDriver(chromeOptions);
 	     }  
 					        
 		 /******** The driver selected is Internet Explorer ********/        
