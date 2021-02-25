@@ -1,8 +1,8 @@
-Feature: Home page
-        As a user I can go to the estefafdez website homepage
+Feature: Search page
+        As a user I can go to the google page
 @smoke
-  Scenario: Get the estefafdez website homepage
-    Given I navigate to "https://estefafdez.github.io/"
+  Scenario: Visit google
+    Given I navigate to "https://www.google.com/"
     Then I wait for 2 seconds
     And I navigate forward
     And I take screenshot

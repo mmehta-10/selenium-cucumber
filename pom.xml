@@ -6,10 +6,7 @@
     <version>1.0.10</version>
     <developers>
         <developer>
-            <name>estefafdez</name>
-        </developer>
-        <developer>
-            <name>FJFGonzalez</name>
+            <name>Megha</name>
         </developer>
     </developers>
 
@@ -133,6 +130,13 @@
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.11</version>
+        </dependency>
+
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>

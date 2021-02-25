@@ -21,8 +21,8 @@ public class CreateDriver {
     private static String properties = "test.properties";
     private static Properties prop = new Properties();
     private static InputStream in = WebDriverFactory.class.getResourceAsStream("/test.properties");    
-    private static CreateDriver instance = null;
-  
+//    private static CreateDriver instance = null;
+  private static WebDriver instance = null;
     /******** Log Attribute ********/
     private static Logger log = Logger.getLogger(CreateDriver.class);
     
@@ -35,9 +35,10 @@ public class CreateDriver {
      * Singleton pattern
      * @return a single instance
      */
-    public static CreateDriver getInstance() {
+    public static WebDriver getInstance() {
         if (instance == null) {
-            instance = new CreateDriver();
+//            instance = new CreateDriver();
+            instance = CreateDriver.initConfig();
         }
         return instance;
     }    

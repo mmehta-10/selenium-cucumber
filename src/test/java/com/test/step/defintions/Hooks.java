@@ -47,7 +47,7 @@ public abstract class Hooks {
 	 	 * @return driver
 	 	 */
 		public static WebDriver getDriver() {
-			return CreateDriver.initConfig(); 
+			return CreateDriver.getInstance();
 		}
 	     
 	 	@After
