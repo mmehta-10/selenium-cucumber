@@ -1,12 +1,14 @@
 package com.test.step.defintions;
 
+import com.selenium.configure.environment.PropertiesHandler;
+import io.cucumber.java.PendingException;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-
-import com.selenium.configure.environment.PropertiesHandler;
-import cucumber.api.java.en.When;
 
 /**
  * This class contains methods to allow you to click on an element
@@ -60,4 +62,15 @@ public class ClickSteps {
 		log.info("Click on link having partial text: " + text);
 	}
 
+    @When("^I click on link \"([^\"]*)\"$")
+    public void iClickOnLink(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^I should be taken to page with header \"([^\"]*)\"$")
+    public void iShouldBeTakenToPageWithHeader(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }

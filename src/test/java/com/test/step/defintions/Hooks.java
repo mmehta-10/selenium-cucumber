@@ -1,6 +1,12 @@
 package com.test.step.defintions;
 
-import java.net.MalformedURLException;
+import com.selenium.configure.environment.CreateDriver;
+//import cucumber.api.Scenario;
+//import cucumber.api.java.After;
+//import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -8,11 +14,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
-import com.selenium.configure.environment.CreateDriver;
-
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import java.net.MalformedURLException;
 
 public abstract class Hooks {
 	
@@ -58,10 +60,10 @@ public abstract class Hooks {
 	       
 	        if(scenario.isFailed()) {
 		        try {
-		        	scenario.write("The scenario failed.");
-		        	scenario.write("Current Page URL is " + driver.getCurrentUrl());
+		        	scenario.log("The scenario failed.");
+		        	scenario.log("Current Page URL is " + driver.getCurrentUrl());
 		            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-		            scenario.embed(screenshot, "resources/screenshot");
+		            scenario.attach(screenshot, "image/png", "resources/screenshot");
 		        } catch (WebDriverException somePlatformsDontSupportScreenshots) {
 		            System.err.println(somePlatformsDontSupportScreenshots.getMessage());
 		        }	        

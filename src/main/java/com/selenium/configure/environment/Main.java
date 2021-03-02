@@ -1,8 +1,8 @@
 package com.selenium.configure.environment;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
+
+import java.io.IOException;
 
 /**
  * This class contains methods to manage the latest release of the Geckodriver, ChromeDriver and IEDriver.

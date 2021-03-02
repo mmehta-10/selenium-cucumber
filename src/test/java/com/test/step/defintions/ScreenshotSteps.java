@@ -1,9 +1,7 @@
 package com.test.step.defintions;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.GregorianCalendar;
+//import cucumber.api.java.en.And;
+import io.cucumber.java.en.And;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -11,7 +9,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.java.en.And;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 
 /**
  * This class contains methods to allow you to take screenshots

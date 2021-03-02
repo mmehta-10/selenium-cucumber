@@ -1,12 +1,12 @@
 package com.selenium.configure.environment;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 /**
  * This class select and configure the Driver according to your browser selection on the POM.
@@ -66,7 +66,7 @@ public class WebDriverFactory {
 				 WebDriverManager.chromedriver().setup();
 
 				 chromeOptions.addArguments("--no-sandbox");
-				 chromeOptions.addArguments("--headless");
+//				 chromeOptions.addArguments("--headless");
 				 chromeOptions.addArguments("disable-gpu");
 	    	 }
 

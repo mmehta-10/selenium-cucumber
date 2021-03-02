@@ -1,13 +1,14 @@
 package com.test.step.defintions;
 
+import com.selenium.configure.environment.PropertiesHandler;
+//import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import com.selenium.configure.environment.PropertiesHandler;
-
-import cucumber.api.java.en.When;
 
 /**
  * This class contains methods to allow you input into a field. 

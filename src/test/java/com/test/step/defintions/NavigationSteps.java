@@ -1,17 +1,11 @@
 package com.test.step.defintions;
 
-import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 import com.selenium.configure.environment.PropertiesHandler;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.When;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.*;
 
 /**
  * This class contains methods to allow you navigate on the browser

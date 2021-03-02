@@ -1,8 +1,8 @@
 package com.test.step.defintions;
 
-import java.awt.AWTException;
-import java.awt.MouseInfo;
-import java.awt.Robot;
+import com.selenium.configure.environment.PropertiesHandler;
+//import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -10,8 +10,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.selenium.configure.environment.PropertiesHandler;
-import cucumber.api.java.en.When;
+import java.awt.*;
 
 /**
  * This class contains methods to allow you to use keyboard methods

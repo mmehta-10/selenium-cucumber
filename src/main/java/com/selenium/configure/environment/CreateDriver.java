@@ -1,11 +1,11 @@
 package com.selenium.configure.environment;
 
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 
 
 /**

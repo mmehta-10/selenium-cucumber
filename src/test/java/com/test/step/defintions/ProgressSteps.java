@@ -1,14 +1,12 @@
 package com.test.step.defintions;
 
+import com.selenium.configure.environment.PropertiesHandler;
+import io.cucumber.java.en.Then;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.selenium.configure.environment.PropertiesHandler;
-
-import cucumber.api.java.en.Then;
 
 /**
  * This class contains methods to allow you to wait for a certain event. 
