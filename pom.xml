@@ -30,6 +30,7 @@
         <jsoup.version>1.13.1</jsoup.version>
         <guava.version>30.0-jre</guava.version>
         <commons-fileupload.version>1.4</commons-fileupload.version>
+        <aspectj.version>1.8.10</aspectj.version>
 
 
         <!-- Test Browser -->
@@ -53,26 +54,26 @@
             <!--            <scope>test</scope>-->
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.junit.vintage</groupId>-->
-<!--            <artifactId>junit-vintage-engine</artifactId>-->
-<!--            <version>5.7.1</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.junit.vintage</groupId>-->
+        <!--            <artifactId>junit-vintage-engine</artifactId>-->
+        <!--            <version>5.7.1</version>-->
+        <!--        </dependency>-->
         <!-- These are the cucumber-junit dependencies -->
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-junit</artifactId>-->
-<!--            <version>${cucumber-junit.version}</version>-->
-<!--            &lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.cucumber</groupId>-->
+        <!--            <artifactId>cucumber-junit</artifactId>-->
+        <!--            <version>${cucumber-junit.version}</version>-->
+        <!--            &lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+        <!--        </dependency>-->
 
         <!-- These are the junit dependencies -->
-<!--        <dependency>-->
-<!--            <groupId>junit</groupId>-->
-<!--            <artifactId>junit</artifactId>-->
-<!--            <version>${junit.version}</version>-->
-<!--            &lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>junit</groupId>-->
+        <!--            <artifactId>junit</artifactId>-->
+        <!--            <version>${junit.version}</version>-->
+        <!--            &lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+        <!--        </dependency>-->
 
         <!-- These are the selenium-webdriver dependencies -->
         <dependency>
@@ -159,7 +160,14 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>6.9.1</version>
-<!--            <scope>test</scope>-->
+            <!--            <scope>test</scope>-->
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber5-jvm -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber5-jvm</artifactId>
+            <version>2.13.8</version>
         </dependency>
 
     </dependencies>
@@ -200,7 +208,20 @@
                     <configuration>
                         <!--					 	<encoding>UTF-8</encoding>-->
                         <testFailureIgnore>true</testFailureIgnore>
+                        <!--                        <configuration>-->
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+<!--                            -Dcucumber.options="&#45;&#45;plugin io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"-->
+                        </argLine>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
+                    <!--                    </configuration>-->
                 </plugin>
 
                 <!-- Maven Compiler Plugin -->

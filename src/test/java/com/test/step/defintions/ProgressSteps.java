@@ -26,6 +26,11 @@ public class ProgressSteps {
 
 	/** Wait for a specific period of time */
 	@Then("^I wait for (\\d+) seconds$")
+	public void waitForSeconds(int seconds) {
+		log.info("Waiting for..."+seconds + " seconds.");
+		new WebDriverWait(driver, seconds);
+	}
+
 	public static void wait(int seconds) {
 		log.info("Waiting for..."+seconds + " seconds.");
 		new WebDriverWait(driver, seconds);
