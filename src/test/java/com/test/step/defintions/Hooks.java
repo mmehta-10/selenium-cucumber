@@ -60,10 +60,11 @@ public abstract class Hooks {
 	       
 	        if(scenario.isFailed()) {
 		        try {
-		        	scenario.log("The scenario failed.");
-		        	scenario.log("Current Page URL is " + driver.getCurrentUrl());
+		        	scenario.write("The scenario failed.");
+		        	scenario.write("Current Page URL is " + driver.getCurrentUrl());
 		            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-		            scenario.attach(screenshot, "image/png", "resources/screenshot");
+//		            scenario.attach(screenshot, "image/png", "resources/screenshot");
+					scenario.embed(screenshot, "resources/screenshot");
 		        } catch (WebDriverException somePlatformsDontSupportScreenshots) {
 		            System.err.println(somePlatformsDontSupportScreenshots.getMessage());
 		        }	        

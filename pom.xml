@@ -18,7 +18,7 @@
         <!-- Versions section -->
         <java.version>1.8</java.version>
         <selenium.version>3.141.59</selenium.version>
-        <cucumber-java.version>6.9.1</cucumber-java.version>
+        <cucumber-java.version>5.1.0</cucumber-java.version>
         <cucumber-junit.version>5.7.0</cucumber-junit.version>
         <junit.version>4.13.1</junit.version>
         <log4j.version>1.2.17</log4j.version>
@@ -159,7 +159,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>6.9.1</version>
+            <version>5.1.0</version>
             <!--            <scope>test</scope>-->
         </dependency>
 
@@ -211,7 +211,6 @@
                         <!--                        <configuration>-->
                         <argLine>
                             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-<!--                            -Dcucumber.options="&#45;&#45;plugin io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"-->
                         </argLine>
                     </configuration>
                     <dependencies>

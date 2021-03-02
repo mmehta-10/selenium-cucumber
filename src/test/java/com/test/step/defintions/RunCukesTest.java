@@ -9,9 +9,8 @@ import org.junit.runner.RunWith;
 		plugin = {"pretty",
 				"html:target/cucumberHtmlReport",
 				"json:target/cucumber.json",
-				"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",},
+				"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"},
 		features = "classpath:features"
 )
-
 public class RunCukesTest{
 }
