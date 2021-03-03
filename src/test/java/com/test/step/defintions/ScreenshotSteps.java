@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
+import static io.qameta.allure.Allure.addAttachment;
 
 /**
  * This class contains methods to allow you to take screenshots
@@ -36,6 +37,8 @@ public class ScreenshotSteps {
     	String screenShotName = "resources/screenshot/" + dateFormat.format(GregorianCalendar.getInstance().getTime());		
     	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
     	log.info("Screenshot saved as:" + screenShotName);
-    	FileUtils.copyFile(scrFile, new File(String.format("%s.png", screenShotName)));    	
-    }
+    	FileUtils.copyFile(scrFile, new File(String.format("%s.png", screenShotName)));
+		addAttachment("Screenshot", FileUtils.openInputStream(scrFile));
+
+	}
 }
