@@ -66,7 +66,7 @@ public class WebDriverFactory {
 				 WebDriverManager.chromedriver().setup();
 
 				 chromeOptions.addArguments("--no-sandbox");
-//				 chromeOptions.addArguments("--headless");
+				 chromeOptions.addArguments("--headless");
 				 chromeOptions.addArguments("disable-gpu");
 	    	 }
 
