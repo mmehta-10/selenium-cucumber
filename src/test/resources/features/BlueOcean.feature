@@ -8,9 +8,16 @@ Feature: Visit Jenkins Blue ocean page
 #    And I wait for 5 seconds
 #    Then I should be taken to page with header "Blue Ocean"
 
-    @medium
+  @medium
   Scenario: Get the Blue ocean section on Jenkins website.
     Given I navigate to "https://www.jenkins.io/doc/"
+    When I click on element having xpath "blueOcean"
+    And I wait for 5 seconds
+    Then element having xpath "blueOceanHeader" should be present
+
+  @medium @negative
+  Scenario: Get the Blue ocean section on Jenkins website.
+    Given I navigate to "https://www.jenkins1.io/doc/"
     When I click on element having xpath "blueOcean"
     And I wait for 5 seconds
     Then element having xpath "blueOceanHeader" should be present
