@@ -59,6 +59,9 @@
 
     <repositories>
         <repository>
+            <id>central</id>
+        </repository>
+        <repository>
             <id>releases</id>
             <url>http://54.88.35.46:8082/artifactory/cpp-snapshot-local/</url>
             <releases>
