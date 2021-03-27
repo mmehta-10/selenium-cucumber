@@ -46,7 +46,7 @@
 
     <distributionManagement>
         <repository>
-            <id>central</id>
+            <id>releases</id>
             <name>8170d02ab197-releases</name>
             <url>http://54.88.35.46:8081/artifactory/cpp-release-local</url>
         </repository>
@@ -59,7 +59,7 @@
 
     <repositories>
         <repository>
-            <id>central</id>
+            <id>releases</id>
             <url>http://54.88.35.46:8082/artifactory/cpp-snapshot-local/</url>
             <releases>
                 <enabled>true</enabled>
