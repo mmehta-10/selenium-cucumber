@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>SeleniumCucumberJava</groupId>
-    <artifactId>com.selenium.cucumber</artifactId>
-    <version>1.0.10</version>
+    <groupId>com.selenium.test</groupId>
+    <artifactId>cucumber</artifactId>
+    <version>1.1.11-SNAPSHOT</version>
     <developers>
         <developer>
-            <name>Megha</name>
+            <name>Megha Mehta</name>
         </developer>
     </developers>
 
@@ -43,6 +43,32 @@
         <log.level>INFO</log.level>
 
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>8170d02ab197-releases</name>
+            <url>http://54.88.35.46:8081/artifactory/cpp-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>8170d02ab197-snapshots</name>
+            <url>http://54.88.35.46:8081/artifactory/cpp-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://54.88.35.46:8082/artifactory/cpp-snapshot-local/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
 
@@ -199,7 +225,6 @@
         <!-- Plugins section -->
         <pluginManagement>
             <plugins>
-
                 <!-- Maven Surefire Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
