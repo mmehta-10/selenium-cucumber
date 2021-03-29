@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.selenium.test</groupId>
     <artifactId>cucumber</artifactId>
-    <version>1.1.11-SNAPSHOT</version>
+    <version>1.1.11</version>
     <developers>
         <developer>
             <name>Megha Mehta</name>
@@ -48,12 +48,12 @@
         <repository>
             <id>releases</id>
             <name>8170d02ab197-releases</name>
-            <url>http://54.88.35.46:8081/artifactory/cpp-release-local</url>
+            <url>http://54.152.206.195:8081/artifactory/cpp-release-local</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>8170d02ab197-snapshots</name>
-            <url>http://54.88.35.46:8081/artifactory/cpp-snapshot-local</url>
+            <url>http://54.152.206.195:8081/artifactory/cpp-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -64,13 +64,21 @@
         </repository>
         <repository>
             <id>releases</id>
-            <url>http://54.88.35.46:8082/artifactory/cpp-snapshot-local/</url>
+            <url>http://54.152.206.195:8082/artifactory/cpp-snapshot-local/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>apache.snapshots</id>
+            <name>Apache Snapshot Repository</name>
+            <url>https://repository.apache.org/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
         </repository>
     </repositories>
 
