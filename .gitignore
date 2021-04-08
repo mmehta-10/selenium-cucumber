@@ -9,3 +9,4 @@ test-output/
 test-output/junitreports/
 /target/
 /resources/screenshot/
+*.iml
